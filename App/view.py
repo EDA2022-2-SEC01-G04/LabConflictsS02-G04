@@ -50,7 +50,7 @@ def printMenu():
     print("1- Cargar Libros")
     print("2- Cargar Tags")
     # TODO: Modificaciones de Est-1 en el Lab 2, agregar opcion 3
-
+    print("3- Cargar Booktags")
     print("0- Salir")
 
 
@@ -90,6 +90,9 @@ def firstBook(control):
 
 def lastBook(control):
     # TODO: Modificaciones de Est-2 en el Lab 2
+    last = controller.lastBook(control)
+    return last
+
     """
     Devuelve el último libro cargado
     """
@@ -114,6 +117,8 @@ while True:
         first = None
 
         # TODO: Modificaciones de Est-2 en el Lab 2
+        last = lastBook(control)
+        print("Último libro cargado:\n" + str(last) + "\n")
         last = None
 
     elif int(inputs[0]) == 2:
